@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Encabezado Actividades.html</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Actividades</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+
+<h1>Cuerpo del Html de Actividades</h1>
+<br>
+<ion-row>
+<ion-col>
+  <ion-button (click)="getActividades()" >Cargar Actividades</ion-button>
+  <ion-button [routerLink]="['/home']">Salir</ion-button>
+</ion-col>
+
+</ion-row>
+<br>
+  <ion-list>
+    <br>
+  <ion-grid>
+      <ion-row>
+      <ion-col>Id</ion-col>
+      <ion-col>Orden</ion-col>
+      <ion-col>Aviso</ion-col>
+      <ion-col>Fecha</ion-col>
+      <ion-col>UT</ion-col>
+      <ion-col>Opciones</ion-col>
+    </ion-row>
+    <ion-item *ngFor="let actividad of actividades">
+      <ion-col value="id">{{actividad['id']}}</ion-col>
+      <ion-col value="orden">{{actividad['orden']}}</ion-col>
+      <ion-col value="aviso">{{actividad['aviso']}}</ion-col>
+      <ion-col value="fecha">{{actividad['fecha']}}</ion-col>
+      <ion-col value="ut">{{actividad['ut']}}</ion-col>
+      <ion-col> 
+        <ion-button (click)="editActividad(actividad['id'])">Asignar Responsable</ion-button>
+        </ion-col>
+      <!-- {{post['userId']}} {{post['id']}} {{post['title']}} -->
+
+      <!-- {{post['usuario_user']}} {{post['usuario_nombre']}} {{post['usuario_estado']}} -->
+    </ion-item>
+  </ion-grid>
+</ion-list>
+</ion-content>
