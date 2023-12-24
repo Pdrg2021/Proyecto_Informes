@@ -25,7 +25,6 @@ export class DatosService {
   constructor(private http:HttpClient) { }
 
   datosgetActividades():Observable<any>{
-    //return this.http.get(this.apiURL+'/posts/').pipe(retry(3));
     return this.http.get('https://g16b2df43ad90f8-actividadesproyectoinformes.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/modulo_actividad/obtenerActividades').pipe(retry(3));
   };
   datosgetActividad(id:string):Observable<any>{

@@ -1,23 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Encabezado Actividades.html</ion-title>
+    <ion-title>Actividades</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Actividades</ion-title>
-    </ion-toolbar>
-  </ion-header> -->
-
-
-<h1>Cuerpo del Html de Actividades</h1>
+<h1>Listado de Actividades</h1>
 <br>
 <ion-row>
 <ion-col>
   <ion-button (click)="getActividades()" >Cargar Actividades</ion-button>
-  <ion-button [routerLink]="['/home']">Salir</ion-button>
+  <ion-button [routerLink]="['']">Salir</ion-button>
 </ion-col>
 
 </ion-row>
@@ -40,8 +33,9 @@
       <ion-col value="fecha">{{actividad['fecha']}}</ion-col>
       <ion-col value="ut">{{actividad['ut']}}</ion-col>
       <ion-col> 
-        <ion-button (click)="editActividad(actividad['id'])">Asignar Responsable</ion-button>
-        </ion-col>
+    
+        <ion-button (click)="editActividad(actividad['id'])" >Asignar Responsable</ion-button> 
+                </ion-col>
       <!-- {{post['userId']}} {{post['id']}} {{post['title']}} -->
 
       <!-- {{post['usuario_user']}} {{post['usuario_nombre']}} {{post['usuario_estado']}} -->

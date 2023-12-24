@@ -9,8 +9,6 @@ import { AlertController, NavController } from '@ionic/angular';
   styleUrls: ['./actividades.page.scss'],
 })
 export class ActividadesPage implements OnInit {
-
-  alumnos=[];
   actividades=[];
 
 
